@@ -1,0 +1,31 @@
+// backgrounds
+$background: #080808;
+$bg-nav: #181818;
+$bg-nav-link-hover: #141414;
+$bg-search: #363636;
+$border-search: #b5b5b5;
+
+// colors
+$text: #dedede;
+$title: #FFFFFF;
+$subtitle: #B3B3B3;
+$button-color: #FFFFFF;
+$text-input: #FFFFFF;
+$logo:#0a0a0a;
+
+//buttons
+$bg-button: #2e2e2e;
+$bg-button-hover: #3c3b3b;
+$bg-button-play: #FFFFFF;
+$bg-button-play-hover: #dcdcdc;
+$bg-button-play-active: #949494;
+$bg-button-media-hover: #1b1b1b;
+$bg-button-fav: #FFFFFF;
+$bg-button-fav-hover: #1b1b1b;
+$bg-button-fav-active: #2e2e2e;
+
+// fonts
+@font-face {
+    font-family: 'LexendPeta';
+    src: url('/fonts/static/LexendPeta-Medium.ttf');
+}

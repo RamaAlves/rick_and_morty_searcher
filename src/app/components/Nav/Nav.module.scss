@@ -1,0 +1,29 @@
+@import "../../../variables.scss";
+.nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $bg-nav;
+    padding: 1rem 4rem;
+
+    .logo{
+       fill:$logo; 
+    }
+    .list{
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        justify-content: space-around;
+        list-style: none;
+        li{
+            padding: 1rem;
+            border-radius: .375rem;
+            transition: background-color .2s ease-in;
+            &:hover{
+                background-color: $bg-nav-link-hover;
+            }
+        }
+    }
+}
