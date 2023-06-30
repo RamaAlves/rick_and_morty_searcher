@@ -1,9 +1,13 @@
 import { useGetData } from "../../hooks/useGetData";
-import { useState } from "react";
+import { EpisodeSchema } from "../../interfaces/Interfaces";
 import style from "./Episodes.module.scss";
+import {EpisodeCard} from "../../components/Card/EpisodeCard"
+import { useContext } from "react";
+import { ThemeContext } from "../../contexts/ThemeContext";
 
 const URL_API = "https://rickandmortyapi.com/api/episode";
 export function AllEpisodes() {
+  const [darkMode] = useContext(ThemeContext);
   /* const [search, setSearch] = useState<string>(); */
   const { loading, error, data } = useGetData(URL_API);
   /* console.log(data); */
@@ -20,14 +24,10 @@ export function AllEpisodes() {
   }
   if (data) {
     return (
-      <main className={style.main}>
+      <main className={darkMode ? style.darkModeMain : style.main}>
         <h1>Episodes</h1>
-        {data.results.map((episode: unknown) => {
-          return (
-            <div key={episode.id}>
-              {episode.name}, {episode.episode}, {episode.air_date}
-            </div>
-          );
+        {data.results.map((episode: EpisodeSchema) => {
+          return <EpisodeCard key={episode.id} episode={episode} />;
         })}
       </main>
     );

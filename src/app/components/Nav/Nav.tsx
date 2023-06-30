@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
 import style from "./Nav.module.scss";
+import { useContext } from "react";
+import { ThemeContext } from "../../contexts/ThemeContext";
 
 export function Nav() {
+  const [darkMode, setDarkMode] = useContext(ThemeContext);
+  function changeTheme() {
+    setDarkMode(!darkMode)
+  }
   return (
     <nav className={style.nav}>
       <Link to="/">
@@ -27,6 +33,7 @@ export function Nav() {
           <li>Locations</li>
         </Link>
       </ul>
+      <input type="checkbox" onClick={changeTheme} />
     </nav>
   );
 }

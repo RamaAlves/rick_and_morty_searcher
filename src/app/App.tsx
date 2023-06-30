@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "./contexts/ThemeContext";
 import { Layout } from "./components/Layout/Layout";
 import { Character } from "./screens/Characters/Character";
 import { AllEpisodes } from "./screens/Episodes/AllEpisodes";
@@ -12,19 +12,21 @@ import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/character/:id" element={<Character />} />
-          <Route path="/episode" element={<AllEpisodes />} />
-          <Route path="/episode/:id" element={<Episode />} />
-          <Route path="/location" element={<AllLocations />} />
-          <Route path="/location/:id" element={<Location />} />
-        </Route>
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
+    <ThemeProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/character/:id" element={<Character />} />
+            <Route path="/episode" element={<AllEpisodes />} />
+            <Route path="/episode/:id" element={<Episode />} />
+            <Route path="/location" element={<AllLocations />} />
+            <Route path="/location/details" element={<Location />} />
+          </Route>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
