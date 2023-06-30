@@ -14,14 +14,18 @@ export function AllLocations() {
   const { loading, error, data } = useGetData(urlRequest);
   /* console.log(data); */
   if (loading) {
-    return <h1>Cargando...</h1>;
+    return (
+      <main className={darkMode ? style.darkModeMain : style.main}>
+        <h1>Cargando...</h1>;
+      </main>
+    );
   }
   if (error) {
     return (
-      <>
+      <main className={darkMode ? style.darkModeMain : style.main}>
         <h1>Error</h1>
         <p>descripcion:{error}</p>
-      </>
+      </main>
     );
   }
   if (data) {
