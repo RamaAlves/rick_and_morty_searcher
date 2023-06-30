@@ -13,7 +13,6 @@ export function Home() {
   const [search, setSearch] = useState<string>("Rick");
   const [urlRequest, setUrlRequest] = useState<string>(URL_API);
   const { loading, error, data } = useGetData(urlRequest??URL_API);
-  console.log(data);
   function updateUrlRequest() {
     setUrlRequest(URL_API + "/?name=" + search);
   }
@@ -45,10 +44,10 @@ export function Home() {
         />
       </form>
       <article className={style.article}>
-        {loading && <h1>Cargando...</h1>}
+        {loading && <h2>Cargando...</h2>}
         {error && (
           <>
-            <h1>Error</h1>
+            <h2>Error</h2>
             <p>description:{error}</p>
           </>
         )}

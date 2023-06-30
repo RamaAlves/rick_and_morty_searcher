@@ -5,11 +5,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: $bg-nav;
+    background-color: $bg-nav-lm;
     padding: 1rem 4rem;
 
     .logo{
-       fill:$logo; 
+       fill:$logo-lm; 
     }
     .list{
         display: flex;
@@ -17,12 +17,52 @@
         width: 50%;
         justify-content: space-around;
         list-style: none;
-        li{
-            padding: 1rem;
-            border-radius: .375rem;
-            transition: background-color .2s ease-in;
-            &:hover{
-                background-color: $bg-nav-link-hover;
+        a{
+            text-decoration: none;
+            li{
+                padding: 1rem;
+                border-radius: .375rem;
+                transition: background-color .2s ease-in;
+                color:$text-lm;
+                &:hover{
+                    background-color: $bg-nav-link-hover-lm;
+                }
+            }
+        }
+    }
+}
+.darkModeNav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $bg-nav;
+    padding: 1rem 4rem;
+
+    .logo {
+        fill: $logo;
+    }
+
+    .list {
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        justify-content: space-around;
+        list-style: none;
+
+        a {
+            text-decoration: none;
+
+            li {
+                padding: 1rem;
+                border-radius: .375rem;
+                transition: background-color .2s ease-in;
+                color: $text;
+
+                &:hover {
+                    background-color: $bg-nav-link-hover;
+                }
             }
         }
     }

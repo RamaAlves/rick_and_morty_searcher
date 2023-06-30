@@ -5,7 +5,7 @@ export function EpisodeCard(props: any) {
   return (
     <Link className={style.container} to={`/episode/${props.episode.id}`}>
       
-        <h4>Name:{props.episode.name}</h4>
+        <h4>Name: {props.episode.name}</h4>
         <p>Episode: {props.episode.episode}</p>
       
     </Link>

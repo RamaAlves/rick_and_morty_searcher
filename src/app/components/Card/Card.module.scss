@@ -1,12 +1,16 @@
+@import "../../../variables.scss";
 .container{
     display:flex;
     flex-direction: column;
-    width: 200px;
-    gap:1rem;
+    min-width: 240px;
+    max-width: 240px;
+    min-height: 150px;
+    gap:.5rem;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
     padding: 1rem;
-    background-color: azure;
+    background-color: $background-card;
+    color: $text;
     border-radius: .375rem;
     text-decoration: none;
     img{
@@ -14,8 +18,41 @@
         border-radius: .375rem;
     }
     h4{
-        font-style: normal;
-        
+       font-size: 1rem; 
+       max-width: 100%;
     }
-    p{}
+    p{
+        font-size: .8rem;
+        max-width: 100%;
+    }
+}
+.darkModeContainer{
+    display: flex;
+    flex-direction: column;
+    min-width: 240px;
+    max-width: 240px;
+    min-height: 150px;
+    gap: .5rem;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 1rem;
+    background-color: $background-card;
+    color: $text;
+    border-radius: .375rem;
+    text-decoration: none;
+    
+    img {
+        width: 100%;
+        border-radius: .375rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    p {
+        font-size: .8rem;
+        max-width: 100%;
+    }
 }

@@ -29,12 +29,10 @@ export function Location() {
     return (
       <main className={darkMode ? style.darkModeMain : style.main}>
         <div className={style.card}>
-          <>
-            <p>name:{location.name}</p>
-            <p>type:{location.type}</p>
-            <p>dimension:{location.dimension}</p>
-            <p>created:{location.created}</p>
-          </>
+          <p>name:{location.name}</p>
+          <p>type:{location.type}</p>
+          <p>dimension:{location.dimension}</p>
+          <p>created:{location.created}</p>
         </div>
       </main>
     );

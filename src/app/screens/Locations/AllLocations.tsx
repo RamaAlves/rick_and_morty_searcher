@@ -13,7 +13,7 @@ export function AllLocations() {
   const [urlRequest, setUrlRequest] = useState<string>(URL_API);
   /* const [search, setSearch] = useState<string>(); */
 
-  const { loading, error, data } = useGetData(urlRequest??URL_API);
+  const { loading, error, data } = useGetData(urlRequest ?? URL_API);
   /* console.log(data); */
   if (loading) {
     return (
@@ -34,9 +34,11 @@ export function AllLocations() {
     return (
       <main className={darkMode ? style.darkModeMain : style.main}>
         <h1>Locations</h1>
-        {data.results.map((location: LocationSchema) => {
-          return <LocationCard key={location.id} location={location} />;
-        })}
+        <article className={style.article}>
+          {data.results.map((location: LocationSchema) => {
+            return <LocationCard key={location.id} location={location} />;
+          })}
+        </article>
         <Paginator
           numPage={numPage}
           handleSetNumPage={setNumPage}

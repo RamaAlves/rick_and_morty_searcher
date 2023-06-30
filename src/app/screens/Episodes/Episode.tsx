@@ -33,10 +33,10 @@ export function Episode() {
           <p>Name: {episode.name}</p>
           <p>Episode: {episode.episode}</p>
         </div>
-        <h4>Los personajes que aparecen en este episodio son:</h4>
+        <h2>Los personajes que aparecen en este episodio son:</h2>
         <div className={style.carrousel}>
           {episode.characters.map((character: string) => {
-            return <CharacterCard url={character} />;
+            return <CharacterCard key={character} url={character} />;
           })}
         </div>
       </main>

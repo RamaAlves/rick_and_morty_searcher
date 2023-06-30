@@ -33,9 +33,11 @@ export function AllEpisodes() {
     return (
       <main className={darkMode ? style.darkModeMain : style.main}>
         <h1>Episodes</h1>
-        {data.results.map((episode: EpisodeSchema) => {
-          return <EpisodeCard key={episode.id} episode={episode} />;
-        })}
+        <article className={style.article}>
+          {data.results.map((episode: EpisodeSchema) => {
+            return <EpisodeCard key={episode.id} episode={episode} />;
+          })}
+        </article>
         <Paginator
           numPage={numPage}
           handleSetNumPage={setNumPage}
