@@ -9,7 +9,7 @@ export function Nav() {
     setDarkMode(!darkMode)
   }
   return (
-    <nav className={style.nav}>
+    <nav className={darkMode ? style.darkModeNav : style.nav}>
       <Link to="/">
         <svg
           className={style.logo}

@@ -4,14 +4,16 @@ import { useState, useContext } from "react";
 import style from "./Home.module.scss";
 import { CharacterCard } from "../../components/Card/CharacterCard";
 import { ThemeContext } from "../../contexts/ThemeContext";
+import { Paginator } from "../../components/interface/Paginator";
 
 const URL_API = "https://rickandmortyapi.com/api/character";
 export function Home() {
   const [darkMode] = useContext(ThemeContext);
+  const [numPage, setNumPage] = useState<number>(1);
   const [search, setSearch] = useState<string>("Rick");
   const [urlRequest, setUrlRequest] = useState<string>(URL_API);
-  const { loading, error, data } = useGetData(urlRequest);
-  /* console.log(data); */
+  const { loading, error, data } = useGetData(urlRequest??URL_API);
+  console.log(data);
   function updateUrlRequest() {
     setUrlRequest(URL_API + "/?name=" + search);
   }
@@ -55,6 +57,9 @@ export function Home() {
             return <CharacterCard key={character.id} character={character} />;
           })}
       </article>
+      {data &&
+      <Paginator numPage={numPage} handleSetNumPage={setNumPage} info={data.info} setUrl={setUrlRequest}/>
+      }
     </main>
   );
 }
