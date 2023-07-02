@@ -1,4 +1,3 @@
-import { useState } from "react";
 import style from "./Paginator.module.scss";
 
 export function Paginator(props: any) {

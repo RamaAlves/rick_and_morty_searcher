@@ -6,36 +6,28 @@
     color: $text-lm;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     padding: 2rem;
 
     .card {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         width: 100%;
-        min-height: 150px;
-        gap: 2rem;
-        justify-content:flex-start;
-        align-items: center;
+        min-height: 300px;
+        gap: .5rem;
+        justify-content: space-around;
+        align-items: flex-start;
         padding: 2rem;
         background-color: $background-card;
         color: $text;
         border-radius: .375rem;
         text-decoration: none;
-        
-        img {
-            min-width: 150px;
-            width: 450px;
-            border-radius: .375rem;
-        }
-        .info{
 
-            p {
-                font-size: 2rem;
-                max-width: 100%;
+        p {
+            font-size: 2rem;
+            max-width: 100%;
             }
-        }
     }
 }
 
@@ -45,36 +37,27 @@
     color: $text;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     padding: 2rem;
 
     .card {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         width: 100%;
-        min-height: 150px;
-        gap: 2rem;
-        justify-content: flex-start;
-        align-items: center;
+        min-height: 300px;
+        gap: .5rem;
+        justify-content: space-around;
+        align-items: flex-start;
         padding: 2rem;
         background-color: $background-card;
         color: $text;
         border-radius: .375rem;
         text-decoration: none;
 
-        img {
-            min-width: 150px;
-            width: 450px;
-            border-radius: .375rem;
-        }
-
-        .info {
-
-            p {
-                font-size: 2rem;
-                max-width: 100%;
-            }
+        p {
+            font-size: 2rem;
+            max-width: 100%;
         }
     }
 }

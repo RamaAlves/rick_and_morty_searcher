@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { EpisodeSchema } from "../../interfaces/Interfaces";
 import style from "./Card.module.scss";
 export function EpisodeCard(props: any) {
   return (

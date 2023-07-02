@@ -8,30 +8,25 @@
   color: #242424;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   padding: 2rem;
 }
 .main .card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
-  min-height: 150px;
-  gap: 2rem;
-  justify-content: flex-start;
-  align-items: center;
+  min-height: 300px;
+  gap: 0.5rem;
+  justify-content: space-around;
+  align-items: flex-start;
   padding: 2rem;
   background-color: #585858;
   color: #dedede;
   border-radius: 0.375rem;
   text-decoration: none;
 }
-.main .card img {
-  min-width: 150px;
-  width: 450px;
-  border-radius: 0.375rem;
-}
-.main .card .info p {
+.main .card p {
   font-size: 2rem;
   max-width: 100%;
 }
@@ -42,30 +37,25 @@
   color: #dedede;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   padding: 2rem;
 }
 .darkModeMain .card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
-  min-height: 150px;
-  gap: 2rem;
-  justify-content: flex-start;
-  align-items: center;
+  min-height: 300px;
+  gap: 0.5rem;
+  justify-content: space-around;
+  align-items: flex-start;
   padding: 2rem;
   background-color: #585858;
   color: #dedede;
   border-radius: 0.375rem;
   text-decoration: none;
 }
-.darkModeMain .card img {
-  min-width: 150px;
-  width: 450px;
-  border-radius: 0.375rem;
-}
-.darkModeMain .card .info p {
+.darkModeMain .card p {
   font-size: 2rem;
   max-width: 100%;
-}/*# sourceMappingURL=Characters.module.css.map */
+}/*# sourceMappingURL=Location.module.css.map */

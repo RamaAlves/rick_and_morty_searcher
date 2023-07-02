@@ -3,12 +3,13 @@ import { Link, useParams } from "react-router-dom";
 import style from "./Characters.module.scss";
 import { useContext } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
+import { CharacterSchema } from "../../interfaces/Interfaces";
 
 const URL_API = "https://rickandmortyapi.com/api/character";
 export function Character() {
   const [darkMode] = useContext(ThemeContext);
   const { id } = useParams();
-  const { loading, error, data: character } = useGetData(URL_API + `/${id}`);
+  const { loading, error, data: character } = useGetData<CharacterSchema>(URL_API + `/${id}`);
   /* console.log(character); */
   if (loading) {
     return (
@@ -31,7 +32,7 @@ export function Character() {
       <main className={darkMode ? style.darkModeMain : style.main}>
         <div className={style.card}>
           <img src={character.image} alt={`imagen de ` + character.name} />
-          <div key={character.id}>
+          <div className={style.info} key={character.id}>
             <p>id: {character.id}</p>
             <p>name: {character.name}</p>
             <p>status: {character.status}</p>

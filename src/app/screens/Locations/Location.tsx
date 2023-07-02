@@ -1,14 +1,15 @@
 import { useGetData } from "../../hooks/useGetData";
 import { useLocation } from "react-router-dom";
-import style from "./Locations.module.scss";
+import style from "./Location.module.scss";
 import { useContext } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
+import { LocationSchema } from "../../interfaces/Interfaces";
 
 const URL_API = "https://rickandmortyapi.com/api/location";
 export function Location() {
   const [darkMode] = useContext(ThemeContext);
   const { state } = useLocation();
-  const { loading, error, data: location } = useGetData(state.url ?? URL_API);
+  const { loading, error, data: location } = useGetData<LocationSchema>(state.url ?? URL_API);
   /* console.log(location); */
   if (loading) {
     return (
@@ -29,10 +30,10 @@ export function Location() {
     return (
       <main className={darkMode ? style.darkModeMain : style.main}>
         <div className={style.card}>
-          <p>name:{location.name}</p>
-          <p>type:{location.type}</p>
-          <p>dimension:{location.dimension}</p>
-          <p>created:{location.created}</p>
+          <p>Name: {location.name}</p>
+          <p>Type: {location.type}</p>
+          <p>Dimension: {location.dimension}</p>
+          <p>Created: {location.created}</p>
         </div>
       </main>
     );

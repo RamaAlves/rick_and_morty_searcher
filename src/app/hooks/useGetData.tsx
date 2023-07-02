@@ -8,7 +8,7 @@ interface Action {
   };
 }
 
-function reducer(state: unknown, action: Action) {
+function reducer(state:any, action: Action) {
   switch (action.type) {
     case "INIT_REQUEST":
       return {

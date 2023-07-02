@@ -12,7 +12,7 @@ export function Home() {
   const [numPage, setNumPage] = useState<number>(1);
   const [search, setSearch] = useState<string>("Rick");
   const [urlRequest, setUrlRequest] = useState<string>(URL_API);
-  const { loading, error, data } = useGetData(urlRequest??URL_API);
+  const { loading, error, data } = useGetData<CharacterSchema>(urlRequest??URL_API);
   function updateUrlRequest() {
     setUrlRequest(URL_API + "/?name=" + search);
   }

@@ -1,42 +1,13 @@
 @import "../../../variables.scss";
 
-.main{
+.main {
     background-color: $background-lm;
     color: $text-lm;
     display: flex;
     flex-direction: column;
-    padding: 2rem;
-    h1{
-        text-align: center;
-        margin:0;
-        margin-bottom: 2rem;
-    }
-    form{
-        display: flex;
-        gap: 2rem;
-        justify-content: center;
-        margin-bottom: 2rem;
-        input{
-            padding: 1rem;
-            width: 60%;
-            border-radius: .375rem;
-            border:none;
-        }
-    }
-    .article{
-        display: flex;
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        gap: 2rem;
-    }
-}
-.darkModeMain {
-    background-color: $background;
-    color: $text;
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
 
     h1 {
         text-align: center;
@@ -44,20 +15,6 @@
         margin-bottom: 2rem;
     }
 
-    form {
-        display: flex;
-        gap: 2rem;
-        justify-content: center;
-        margin-bottom: 2rem;
-
-        input {
-            padding: 1rem;
-            width: 60%;
-            border-radius: .375rem;
-            border: none;
-        }
-
-    }
     .article {
         display: flex;
         width: 100%;
@@ -65,4 +22,30 @@
         justify-content: space-around;
         gap: 2rem;
     }
+
+}
+
+.darkModeMain {
+    background-color: $background;
+    color: $text;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+
+    h1 {
+        text-align: center;
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+
+    .article {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 2rem;
+    }
+
 }
