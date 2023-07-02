@@ -1,1 +1,38 @@
-/*# sourceMappingURL=Paginator.module.css.map */
+@font-face {
+  font-family: "LexendPeta";
+  src: url("/fonts/static/LexendPeta-Medium.ttf");
+}
+.paginator {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.paginator .card {
+  display: flex;
+  padding: 0.5rem 2rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #585858;
+  gap: 1rem;
+}
+.paginator .card button {
+  padding: 0.5rem;
+  background-color: rgb(0, 195, 0);
+  border: 2px solid black;
+  cursor: pointer;
+}
+.paginator .card button:disabled {
+  background-color: #585858;
+  cursor: default;
+}
+.paginator .card p {
+  padding: 1rem;
+  background-image: url("/img/portal-rick-and-morty.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 20px;
+  color: #242424;
+  cursor: default;
+}/*# sourceMappingURL=Paginator.module.css.map */

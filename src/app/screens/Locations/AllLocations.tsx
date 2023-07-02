@@ -14,12 +14,16 @@ export function AllLocations() {
   const [urlRequest, setUrlRequest] = useState<string>(URL_API);
   /* const [search, setSearch] = useState<string>(); */
 
-  const { loading, error, data } = useGetData<LocationSchema>(urlRequest ?? URL_API);
+  const { loading, error, data } = useGetData<LocationSchema>(
+    urlRequest ?? URL_API
+  );
   /* console.log(data); */
   if (loading) {
     return (
       <main className={darkMode ? style.darkModeMain : style.main}>
-        <Portal />
+        <div className={style.containerPortal}>
+          <Portal />
+        </div>
       </main>
     );
   }

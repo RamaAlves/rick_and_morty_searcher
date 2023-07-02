@@ -18,7 +18,9 @@ export function AllEpisodes() {
   if (loading) {
     return (
       <main className={darkMode ? style.darkModeMain : style.main}>
-        <Portal />
+        <div className={style.containerPortal}>
+          <Portal />
+        </div>
       </main>
     );
   }

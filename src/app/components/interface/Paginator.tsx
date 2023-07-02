@@ -11,19 +11,21 @@ export function Paginator(props: any) {
   }
   return (
     <div className={style.paginator}>
-      <button
-        onClick={handlePrevPage}
-        disabled={props.info.prev ? false : true}
-      >
-        ◀
-      </button>
-      <p>{props.numPage}</p>
-      <button
-        onClick={handleNextPage}
-        disabled={props.info.next ? false : true}
-      >
-        ▶
-      </button>
+      <div className={style.card}>
+        <button
+          onClick={handlePrevPage}
+          disabled={props.info.prev ? false : true}
+        >
+          Anterior
+        </button>
+        <p>{props.numPage}</p>
+        <button
+          onClick={handleNextPage}
+          disabled={props.info.next ? false : true}
+        >
+          Siguiente
+        </button>
+      </div>
     </div>
   );
 }

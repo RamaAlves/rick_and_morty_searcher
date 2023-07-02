@@ -4,10 +4,12 @@
     background-color: $background-lm;
     color: $text-lm;
     display: flex;
+    height: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    padding-bottom: 0;
 
     h1 {
         text-align: center;
@@ -17,22 +19,28 @@
 
     .article {
         display: flex;
+        height: 60vh;
         width: 100%;
         flex-wrap: wrap;
         justify-content: space-around;
         gap: 2rem;
+        overflow: auto;
     }
-
+    .containerPortal{
+        height: 90vh;
+    }
 }
 
 .darkModeMain {
     background-color: $background;
     color: $text;
     display: flex;
+    height: 100%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    padding-bottom: 0;
 
     h1 {
         text-align: center;
@@ -42,10 +50,16 @@
 
     .article {
         display: flex;
+        height: 60vh;
         width: 100%;
         flex-wrap: wrap;
         justify-content: space-around;
         gap: 2rem;
+        overflow: auto;
+    }
+
+    .containerPortal {
+        height: 90vh;
     }
 
 }

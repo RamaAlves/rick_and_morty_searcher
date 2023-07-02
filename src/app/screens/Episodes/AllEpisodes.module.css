@@ -6,10 +6,12 @@
   background-color: #e8e8e8;
   color: #242424;
   display: flex;
+  height: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  padding-bottom: 0;
 }
 .main h1 {
   text-align: center;
@@ -18,20 +20,27 @@
 }
 .main .article {
   display: flex;
+  height: 60vh;
   width: 100%;
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 2rem;
+  overflow: auto;
+}
+.main .containerPortal {
+  height: 90vh;
 }
 
 .darkModeMain {
   background-color: #080808;
   color: #dedede;
   display: flex;
+  height: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 1rem;
+  padding-bottom: 0;
 }
 .darkModeMain h1 {
   text-align: center;
@@ -40,8 +49,13 @@
 }
 .darkModeMain .article {
   display: flex;
+  height: 60vh;
   width: 100%;
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 2rem;
+  overflow: auto;
+}
+.darkModeMain .containerPortal {
+  height: 90vh;
 }/*# sourceMappingURL=AllEpisodes.module.css.map */

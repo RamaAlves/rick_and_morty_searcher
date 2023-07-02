@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"Paginator.module.css"}
+{"version":3,"sources":["../../../variables.scss","Paginator.module.css","Paginator.module.scss"],"names":[],"mappings":"AAoCA;EACI,yBAAA;EACA,+CAAA;ACnCJ;ACDA;EACI,aAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;ADGJ;ACFI;EACI,aAAA;EACA,oBAAA;EACA,uBAAA;EACA,mBAAA;EACA,yBFTU;EEUV,SAAA;ADIR;ACHQ;EACI,eAAA;EACA,gCAAA;EACA,uBAAA;EACA,eAAA;ADKZ;ACJY;EACI,yBFjBE;EEkBF,eAAA;ADMhB;ACHQ;EACI,aAAA;EACA,uDAAA;EACA,wBAAA;EACA,4BAAA;EACA,2BAAA;EACA,eAAA;EACA,cFhBF;EEiBE,eAAA;ADKZ","file":"Paginator.module.css"}
