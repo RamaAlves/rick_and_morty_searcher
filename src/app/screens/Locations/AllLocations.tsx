@@ -5,6 +5,7 @@ import { LocationCard } from "../../components/Card/LocationCard";
 import { LocationSchema } from "../../interfaces/Interfaces";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { Paginator } from "../../components/interface/Paginator";
+import { Portal } from "../../components/Portal/Portal";
 
 const URL_API = "https://rickandmortyapi.com/api/location";
 export function AllLocations() {
@@ -18,7 +19,7 @@ export function AllLocations() {
   if (loading) {
     return (
       <main className={darkMode ? style.darkModeMain : style.main}>
-        <h1>Cargando...</h1>;
+        <Portal />
       </main>
     );
   }
@@ -26,7 +27,7 @@ export function AllLocations() {
     return (
       <main className={darkMode ? style.darkModeMain : style.main}>
         <h1>Error</h1>
-        <p>descripcion:{error}</p>
+        <p>descripcion: {error}</p>
       </main>
     );
   }

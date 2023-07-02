@@ -4,6 +4,7 @@ import style from "./Location.module.scss";
 import { useContext } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { LocationSchema } from "../../interfaces/Interfaces";
+import { Portal } from "../../components/Portal/Portal";
 
 const URL_API = "https://rickandmortyapi.com/api/location";
 export function Location() {
@@ -14,7 +15,7 @@ export function Location() {
   if (loading) {
     return (
       <main className={darkMode ? style.darkModeMain : style.main}>
-        <h1>Cargando...</h1>;
+        <Portal />
       </main>
     );
   }

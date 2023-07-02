@@ -4,6 +4,7 @@ import style from "./Characters.module.scss";
 import { useContext } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { CharacterSchema } from "../../interfaces/Interfaces";
+import { Portal } from "../../components/Portal/Portal";
 
 const URL_API = "https://rickandmortyapi.com/api/character";
 export function Character() {
@@ -14,7 +15,7 @@ export function Character() {
   if (loading) {
     return (
       <main className={darkMode ? style.darkModeMain : style.main}>
-        <h1>Cargando...</h1>;
+        <Portal/>
       </main>
     );
   }

@@ -5,6 +5,7 @@ import { EpisodeCard } from "../../components/Card/EpisodeCard";
 import { useContext, useState } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { Paginator } from "../../components/interface/Paginator";
+import { Portal } from "../../components/Portal/Portal";
 
 const URL_API = "https://rickandmortyapi.com/api/episode";
 export function AllEpisodes() {
@@ -17,7 +18,7 @@ export function AllEpisodes() {
   if (loading) {
     return (
       <main className={darkMode ? style.darkModeMain : style.main}>
-        <h1>Cargando...</h1>;
+        <Portal />
       </main>
     );
   }
@@ -25,7 +26,7 @@ export function AllEpisodes() {
     return (
       <main className={darkMode ? style.darkModeMain : style.main}>
         <h1>Error</h1>
-        <p>descripcion:{error}</p>
+        <p>descripcion: {error}</p>
       </main>
     );
   }
@@ -33,6 +34,12 @@ export function AllEpisodes() {
     return (
       <main className={darkMode ? style.darkModeMain : style.main}>
         <h1>Episodes</h1>
+
+        <script
+          type="text/javascript"
+          async
+          src="https://tenor.com/embed.js"
+        ></script>
         <article className={style.article}>
           {data.results.map((episode: EpisodeSchema) => {
             return <EpisodeCard key={episode.id} episode={episode} />;

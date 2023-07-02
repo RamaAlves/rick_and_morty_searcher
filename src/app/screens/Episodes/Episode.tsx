@@ -5,6 +5,7 @@ import style from "./Episode.module.scss";
 import { useContext } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { EpisodeSchema } from "../../interfaces/Interfaces";
+import { Portal } from "../../components/Portal/Portal";
 
 const URL_API = "https://rickandmortyapi.com/api/episode";
 export function Episode() {
@@ -19,7 +20,7 @@ export function Episode() {
   if (loading) {
     return (
       <main className={darkMode ? style.darkModeMain : style.main}>
-        <h1>Cargando...</h1>;
+        <Portal />
       </main>
     );
   }

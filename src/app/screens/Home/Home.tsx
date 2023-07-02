@@ -5,6 +5,7 @@ import style from "./Home.module.scss";
 import { CharacterCard } from "../../components/Card/CharacterCard";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { Paginator } from "../../components/interface/Paginator";
+import { Portal } from "../../components/Portal/Portal";
 
 const URL_API = "https://rickandmortyapi.com/api/character";
 export function Home() {
@@ -44,11 +45,11 @@ export function Home() {
         />
       </form>
       <article className={style.article}>
-        {loading && <h2>Cargando...</h2>}
+        {loading && <Portal />}
         {error && (
           <>
             <h2>Error</h2>
-            <p>description:{error}</p>
+            <p>description: {error}</p>
           </>
         )}
         {data &&
@@ -56,9 +57,14 @@ export function Home() {
             return <CharacterCard key={character.id} character={character} />;
           })}
       </article>
-      {data &&
-      <Paginator numPage={numPage} handleSetNumPage={setNumPage} info={data.info} setUrl={setUrlRequest}/>
-      }
+      {data && (
+        <Paginator
+          numPage={numPage}
+          handleSetNumPage={setNumPage}
+          info={data.info}
+          setUrl={setUrlRequest}
+        />
+      )}
     </main>
   );
 }

@@ -3,12 +3,13 @@ import style from "./Card.module.scss";
 import { useGetData } from "../../hooks/useGetData";
 import { useContext } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
+import { Portal } from "../Portal/Portal";
 export function CharacterCard(props: any) {
   const [darkMode] = useContext(ThemeContext);
   if (props.url) {
     const { loading, error, data: character } = useGetData(props.url);
     if (loading) {
-      return <p>cargando</p>;
+      return <Portal />;
     }
     if (error) {
       return <p>{error}</p>;
