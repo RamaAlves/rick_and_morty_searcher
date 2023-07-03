@@ -1,5 +1,5 @@
 import { useGetData } from "../../hooks/useGetData";
-import { EpisodeSchema } from "../../interfaces/Interfaces";
+import { DataSchema, EpisodeSchema } from "../../interfaces/Interfaces";
 import style from "./AllEpisodes.module.scss";
 import { EpisodeCard } from "../../components/Card/EpisodeCard";
 import { useContext, useState } from "react";
@@ -13,7 +13,7 @@ export function AllEpisodes() {
   const [numPage, setNumPage] = useState<number>(1);
   /* const [search, setSearch] = useState<string>(); */
   const [urlRequest, setUrlRequest] = useState<string>(URL_API);
-  const { loading, error, data } = useGetData<EpisodeSchema>(urlRequest ?? URL_API);
+  const { loading, error, data } = useGetData<DataSchema>(urlRequest ?? URL_API);
   /* console.log(data); */
   if (loading) {
     return (

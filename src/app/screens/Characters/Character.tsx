@@ -3,14 +3,14 @@ import { Link, useParams } from "react-router-dom";
 import style from "./Characters.module.scss";
 import { useContext } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
-import { CharacterSchema } from "../../interfaces/Interfaces";
+import { DataSchema } from "../../interfaces/Interfaces";
 import { Portal } from "../../components/Portal/Portal";
 
 const URL_API = "https://rickandmortyapi.com/api/character";
 export function Character() {
   const [darkMode] = useContext(ThemeContext);
   const { id } = useParams();
-  const { loading, error, data: character } = useGetData<CharacterSchema>(URL_API + `/${id}`);
+  const { loading, error, data: character } = useGetData<DataSchema>(URL_API + `/${id}`);
   /* console.log(character); */
   if (loading) {
     return (

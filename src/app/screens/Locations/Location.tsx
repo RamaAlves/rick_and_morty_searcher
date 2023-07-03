@@ -3,14 +3,14 @@ import { useLocation } from "react-router-dom";
 import style from "./Location.module.scss";
 import { useContext } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
-import { LocationSchema } from "../../interfaces/Interfaces";
+import { DataSchema } from "../../interfaces/Interfaces";
 import { Portal } from "../../components/Portal/Portal";
 
 const URL_API = "https://rickandmortyapi.com/api/location";
 export function Location() {
   const [darkMode] = useContext(ThemeContext);
   const { state } = useLocation();
-  const { loading, error, data: location } = useGetData<LocationSchema>(state.url ?? URL_API);
+  const { loading, error, data: location } = useGetData<DataSchema>(state.url ?? URL_API);
   /* console.log(location); */
   if (loading) {
     return (

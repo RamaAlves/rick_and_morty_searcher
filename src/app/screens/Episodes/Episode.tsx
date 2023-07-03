@@ -4,7 +4,7 @@ import { CharacterCard } from "../../components/Card/CharacterCard";
 import style from "./Episode.module.scss";
 import { useContext } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
-import { EpisodeSchema } from "../../interfaces/Interfaces";
+import { DataSchema } from "../../interfaces/Interfaces";
 import { Portal } from "../../components/Portal/Portal";
 
 const URL_API = "https://rickandmortyapi.com/api/episode";
@@ -15,7 +15,7 @@ export function Episode() {
     loading,
     error,
     data: episode,
-  } = useGetData<EpisodeSchema>(URL_API + `/${id}`);
+  } = useGetData<DataSchema>(URL_API + `/${id}`);
   /* console.log(episode); */
   if (loading) {
     return (

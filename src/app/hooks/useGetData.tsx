@@ -1,5 +1,4 @@
 import { useEffect, useReducer } from "react";
-import { DataSchema } from "../interfaces/Interfaces";
 
 interface Action {
   type: "INIT_REQUEST" | "REQUEST_FAILURE" | "REQUEST_SUCCESS";

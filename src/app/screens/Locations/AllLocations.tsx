@@ -2,7 +2,7 @@ import { useGetData } from "../../hooks/useGetData";
 import { useState, useContext } from "react";
 import style from "./AllLocations.module.scss";
 import { LocationCard } from "../../components/Card/LocationCard";
-import { LocationSchema } from "../../interfaces/Interfaces";
+import { DataSchema, LocationSchema } from "../../interfaces/Interfaces";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { Paginator } from "../../components/interface/Paginator";
 import { Portal } from "../../components/Portal/Portal";
@@ -14,7 +14,7 @@ export function AllLocations() {
   const [urlRequest, setUrlRequest] = useState<string>(URL_API);
   /* const [search, setSearch] = useState<string>(); */
 
-  const { loading, error, data } = useGetData<LocationSchema>(
+  const { loading, error, data } = useGetData<DataSchema>(
     urlRequest ?? URL_API
   );
   /* console.log(data); */

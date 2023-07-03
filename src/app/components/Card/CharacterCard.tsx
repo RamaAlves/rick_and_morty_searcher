@@ -4,10 +4,12 @@ import { useGetData } from "../../hooks/useGetData";
 import { useContext } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { Portal } from "../Portal/Portal";
+import { DataSchema } from "../../interfaces/Interfaces";
+
 export function CharacterCard(props: any) {
   const [darkMode] = useContext(ThemeContext);
   if (props.url) {
-    const { loading, error, data: character } = useGetData(props.url);
+    const { loading, error, data: character } = useGetData<DataSchema>(props.url);
     if (loading) {
       return <Portal />;
     }
