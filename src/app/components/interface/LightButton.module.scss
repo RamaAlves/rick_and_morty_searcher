@@ -1,0 +1,115 @@
+@import "../../../variables.scss";
+.container{
+    background-color: $background-card;
+    border-radius: .375rem;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .2rem;
+    .interruptor{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 6rem;
+        height: 2rem;
+        position:relative;
+    
+        .switch{
+            width:95%;
+            height: 90%;
+            background-color: $background;
+            gap: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2px;
+            button{
+                width: 50%;
+                height: 100%;
+                text-align: center;
+                color: $text-lm;
+                font-size: .8rem;
+                border: none;
+                cursor: pointer;
+                transition: background-color .2s ease-in;
+            }
+            .off{
+                background-color: $bg-button-red;
+            }
+            .offActive{
+                background-color: $bg-button-red-active;
+                box-shadow: $higlight-red 0px 0px 20px;
+                color:$text
+            }
+            .on{
+                background-color: $bg-button-green;
+            }
+            .onActive{
+                background-color: $bg-button-green-active;
+                box-shadow: $higlight-green 0px 0px 20px;
+                color: $text;
+            }
+        }
+    }
+}
+.darkContainer {
+    background-color: $background;
+    border-radius: .375rem;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .2rem;
+    
+    .interruptor {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 6rem;
+        height: 2rem;
+        position: relative;
+        
+        .switch {
+            width: 95%;
+            height: 90%;
+            background-color: $background;
+            gap: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2px;
+            
+            button {
+                width: 50%;
+                height: 100%;
+                text-align: center;
+                color: $text-lm;
+                font-size: .8rem;
+                border: none;
+                cursor: pointer;
+                transition: background-color .2s ease-in;
+            }
+
+            .off {
+                background-color: $bg-button-red;
+            }
+
+            .offActive {
+                background-color: $bg-button-red-active;
+                box-shadow: $higlight-red 0px 0px 20px;
+                color: $text
+            }
+
+            .on {
+                background-color: $bg-button-green;
+            }
+
+            .onActive {
+                background-color: $bg-button-green-active;
+                box-shadow: $higlight-green 0px 0px 20px;
+                color: $text;
+            }
+        }
+    }
+}

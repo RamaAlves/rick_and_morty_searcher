@@ -1,0 +1,111 @@
+@font-face {
+  font-family: "LexendPeta";
+  src: url("/fonts/static/LexendPeta-Medium.ttf");
+}
+.container {
+  background-color: #585858;
+  border-radius: 0.375rem;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.2rem;
+}
+.container .interruptor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 2rem;
+  position: relative;
+}
+.container .interruptor .switch {
+  width: 95%;
+  height: 90%;
+  background-color: #080808;
+  gap: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+}
+.container .interruptor .switch button {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  color: #242424;
+  font-size: 0.8rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in;
+}
+.container .interruptor .switch .off {
+  background-color: #860000;
+}
+.container .interruptor .switch .offActive {
+  background-color: #e40000;
+  box-shadow: #ff2626 0px 0px 20px;
+  color: #dedede;
+}
+.container .interruptor .switch .on {
+  background-color: #006400;
+}
+.container .interruptor .switch .onActive {
+  background-color: #00c300;
+  box-shadow: #00ff00 0px 0px 20px;
+  color: #dedede;
+}
+
+.darkContainer {
+  background-color: #080808;
+  border-radius: 0.375rem;
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.2rem;
+}
+.darkContainer .interruptor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 2rem;
+  position: relative;
+}
+.darkContainer .interruptor .switch {
+  width: 95%;
+  height: 90%;
+  background-color: #080808;
+  gap: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+}
+.darkContainer .interruptor .switch button {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  color: #242424;
+  font-size: 0.8rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in;
+}
+.darkContainer .interruptor .switch .off {
+  background-color: #860000;
+}
+.darkContainer .interruptor .switch .offActive {
+  background-color: #e40000;
+  box-shadow: #ff2626 0px 0px 20px;
+  color: #dedede;
+}
+.darkContainer .interruptor .switch .on {
+  background-color: #006400;
+}
+.darkContainer .interruptor .switch .onActive {
+  background-color: #00c300;
+  box-shadow: #00ff00 0px 0px 20px;
+  color: #dedede;
+}/*# sourceMappingURL=LightButton.module.css.map */

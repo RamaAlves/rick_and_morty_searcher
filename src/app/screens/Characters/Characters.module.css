@@ -11,6 +11,7 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  transition: background-color 0.2s ease-in, color 0.2s ease-in;
 }
 .main .card {
   display: flex;
@@ -45,6 +46,7 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  transition: background-color 0.2s ease-in, color 0.2s ease-in;
 }
 .darkModeMain .card {
   display: flex;
