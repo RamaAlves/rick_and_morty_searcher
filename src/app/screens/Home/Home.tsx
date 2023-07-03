@@ -1,5 +1,5 @@
 import { useGetData } from "../../hooks/useGetData";
-import { CharacterSchema } from "../../interfaces/Interfaces";
+import { CharacterSchema, DataSchema } from "../../interfaces/Interfaces";
 import { useState, useContext } from "react";
 import style from "./Home.module.scss";
 import { CharacterCard } from "../../components/Card/CharacterCard";
@@ -8,12 +8,14 @@ import { Paginator } from "../../components/interface/Paginator";
 import { Portal } from "../../components/Portal/Portal";
 
 const URL_API = "https://rickandmortyapi.com/api/character";
+
+
 export function Home() {
   const [darkMode] = useContext(ThemeContext);
   const [numPage, setNumPage] = useState<number>(1);
   const [search, setSearch] = useState<string>("Rick");
   const [urlRequest, setUrlRequest] = useState<string>(URL_API);
-  const { loading, error, data } = useGetData<CharacterSchema>(urlRequest??URL_API);
+  const { loading, error, data } = useGetData<DataSchema>(urlRequest??URL_API);
   function updateUrlRequest() {
     setUrlRequest(URL_API + "/?name=" + search);
   }

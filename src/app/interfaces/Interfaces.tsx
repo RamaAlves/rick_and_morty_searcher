@@ -38,3 +38,9 @@ export interface EpisodeSchema {
   url: string;
   created: string;
 }
+
+export interface DataSchema{
+  loading: boolean,
+  error?: any,
+  data?:any
+}

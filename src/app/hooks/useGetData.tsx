@@ -1,4 +1,5 @@
 import { useEffect, useReducer } from "react";
+import { DataSchema } from "../interfaces/Interfaces";
 
 interface Action {
   type: "INIT_REQUEST" | "REQUEST_FAILURE" | "REQUEST_SUCCESS";
@@ -8,7 +9,8 @@ interface Action {
   };
 }
 
-function reducer(state:any, action: Action) {
+function reducer(state: any, action: Action) {
+  console.log(state)
   switch (action.type) {
     case "INIT_REQUEST":
       return {
@@ -31,7 +33,7 @@ function reducer(state:any, action: Action) {
   }
 }
 
-export function useGetData<T>(URL_API: string) {
+export function useGetData<T>(URL_API: string):T {
   const [state, dispatch] = useReducer(reducer, {
     loading: true,
     error: null,
@@ -57,5 +59,10 @@ export function useGetData<T>(URL_API: string) {
       dispatch({ type: "REQUEST_FAILURE", payload: { error: e } });
     }
   }
-  return { loading: state.loading, error: state.error, data: state.data };
+  let response: any = {
+    loading: state.loading,
+    error: state.error,
+    data: state.data,
+  };
+  return response;
 }
